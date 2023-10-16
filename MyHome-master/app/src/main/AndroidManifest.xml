@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myhome">
+
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:value="face" />
+
+        <activity android:name=".SecurityDeliveryDetails"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".SecurityCollectDeliveries"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CalendarScheduledResident"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ManageDeliveryScreen"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DeliveryEvent"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CalendarEventActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SecurityComplaintViewDetails"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SecurityComplaintManager"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ComplaintDetails"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ComplaintLog"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Complaints"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FeePayment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PreQRScan"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".QRScan"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".VisitorQuery"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".VisitorDetails"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SecuritySkipLogin"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SecurityRegistration"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ResidentSkipLogin"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ResidentRegistration"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AfterLogin"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ForgotAndChangePasswordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service android:name=".GetDeviceTokenService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

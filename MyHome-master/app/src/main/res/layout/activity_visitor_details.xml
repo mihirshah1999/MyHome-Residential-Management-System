@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="20dp"
+    android:orientation="vertical"
+    tools:context=".VisitorDetails">
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/nameVisitor"
+      android:hint="Visitor Name"
+      android:inputType="textPersonName"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:textColor="@color/colorPrimary"/>
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/phoneVisitor"
+      android:hint="Visitor Phone"
+      android:inputType="phone"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:textColor="@color/colorPrimary"/>
+
+  <RelativeLayout
+      android:layout_width="361dp"
+      android:layout_height="364dp">
+
+    <Button
+        android:id="@+id/uploadbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/graphicOverlay"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="43dp"
+        android:background="@drawable/bg_btn"
+        android:textColor="@color/white"
+        android:text="Upload Image"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/visitorImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="400dp"
+        android:minHeight="350dp"></ImageView>
+
+    <com.example.myhome.Helper.GraphicOverlay
+        android:id="@+id/graphicOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="351dp" />
+
+
+  </RelativeLayout>
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_weight="0.1">
+
+    <ListView
+        android:id="@+id/flatNoList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary" >
+
+    </ListView>
+
+
+  </LinearLayout>
+
+
+
+</android.widget.LinearLayout>
+
